@@ -1,0 +1,49 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar" >
+            <ul class="nav nav-sidebar">
+                <li>
+                    <a [routerLink]="['Seed']" class="nav-item nav-link" >004Seed</a>
+                </li>
+                <li>
+                    <a [routerLink]="['Components']" class="nav-item nav-link" >015Components</a>
+                </li>
+                <li>
+                    <a [routerLink]="['FavoriteComponent']" class="nav-item nav-link" >026FavoriteComponent</a>
+                </li>
+                <li>
+                    <a [routerLink]="['LikeComponent']" class="nav-item nav-link" >036LikeComponent</a>
+                </li>
+                <li>
+                    <a [routerLink]="['VoterComponent']" class="nav-item nav-link" >038VoterComponent</a>
+                </li>
+                <li>
+                    <a [routerLink]="['Twitter']" class="nav-item nav-link" >040Twitter</a>
+                </li>
+                <li>
+                    <a [routerLink]="['ZippyComponent']" class="nav-item nav-link" >054ZippyComponent</a>
+                </li>
+                <li>
+                    <a [routerLink]="['SubscriptionFormComponent']" class="nav-item nav-link" >066Template-driven Forms</a>
+                </li>
+                <li>
+                    <a [routerLink]="['SignUpForm']" class="nav-item nav-link" >069SignUpForm</a>
+                </li>
+                <li>
+                    <a [routerLink]="['ChangePasswordFormComponent']" class="nav-item nav-link" >077Model-driven Forms</a>
+                </li>
+                <li>
+                    <a [routerLink]="['SeedForObservables']" class="nav-item nav-link" >081SeedForObservables</a>
+                </li>
+                <li>
+                    <a [routerLink]="['GitHubProfileComponent']" class="nav-item nav-link" >101Connecting to the Server</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

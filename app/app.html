@@ -1,0 +1,72 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li [class.active]="isCurrentRoute(['GettingStartedwithAngular2'])">
+                    <a [routerLink]="['GettingStartedwithAngular2']">
+                        <div>Section 1</div>
+                        <div>Getting Started with Angular 2</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['Angular2Jumpstart'])">
+                    <a [routerLink]="['Angular2Jumpstart']">
+                        <div>Section 2</div>
+                        <div>Angular 2 Jumpstart</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['DisplayingDataandHandlingFunctions'])">
+                    <a [routerLink]="['DisplayingDataandHandlingFunctions']">
+                        <div>Section 3</div>
+                        <div>Displaying Data and Handling Events</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['BuildingReusableComponents'])">
+                    <a [routerLink]="['BuildingReusableComponents']">
+                        <div>Section 4</div>
+                        <div>Building Re-usable Components</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['ControllingRenderingofHTML'])">
+                    <a [routerLink]="['ControllingRenderingofHTML']">
+                        <div>Section 5</div>
+                        <div>Controlling Rendering of HTML</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['BuildingFormswithBasicValidation'])">
+                    <a [routerLink]="['BuildingFormswithBasicValidation']">
+                        <div>Section 6</div>
+                        <div>Building Forms with Basic Validation</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['BuildingFormswithComplexValidation'])">
+                    <a [routerLink]="['BuildingFormswithComplexValidation']">
+                        <div>Section 7</div>
+                        <div>Building Forms with Complex Validation</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['IntroductiontoReactiveExtensions'])">
+                    <a [routerLink]="['IntroductiontoReactiveExtensions']">
+                        <div>Section 8</div>
+                        <div>Introduction to Reactive Extensions</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['ConnectingtotheServer'])">
+                    <a [routerLink]="['ConnectingtotheServer']">
+                        <div>Section 9</div>
+                        <div>Connecting to the Server</div>
+                    </a>
+                </li>
+                <li [class.active]="isCurrentRoute(['BuildingSinglePageApps'])">
+                    <a [routerLink]="['BuildingSinglePageApps']">
+                        <div>Section 10</div>
+                        <div>Building Single Page Apps</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
