@@ -27,7 +27,8 @@ System.register(['angular2/core', './026FavoriteComponent/favorite.component'], 
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'component',
-                        template: "\n    Section 3\nDisplaying Data and Handling Events\n            <favorite></favorite>\n            ",
+                        moduleId: __moduleName,
+                        templateUrl: './app.html',
                         directives: [favorite_component_1.FavoriteComponent]
                     }), 
                     __metadata('design:paramtypes', [])
