@@ -5,103 +5,18 @@
     </div>
 </div>
 <hr/>
-<h3>Components</h3>
-<p>app.component.ts</p>
-<pre>
-    <code>	
-import {Component} from 'angular2/core'
-@Component({
-	selector:'appcomponent',
-	template:'&lt;div>&lt;/div>'
-})
-export class AppComponent{}
-    </code>
-</pre>
-<p>page.component.ts</p>
-<pre>
-    <code>
-import {AppComponent} from './app.component'
-@Component({
-	template:'&lt;appcomponent>&lt;/appcomponent>',
-	directives:[AppComponent]
-})
-    </code>
-</pre>
+<div *ngFor="let item of items">
+	<h3>{{item.title}}</h3>
+	<p>{{item.description}}</p>
+	<pre><code>{{item.note}}</code></pre>
+</div>
 <div class="jumbotron">
 	<appcomponent></appcomponent>
 </div>
-<h3>Template Options</h3>
-<p>Using an external html template</p>
-<p>app.component.ts</p>
-<pre>
-    <code>
-@Component({
-	selector:'appcomponent',
-	//note that this line allows relative paths for templateUrl
-	moduleId: __moduleName,
-	templateUrl:'./app.component.html'
-})
-    </code>
-</pre>
-<h3>Directives</h3>
-<p>autogrow.directive.ts</p>
-<pre>
-    <code>	
-import {Directive} from 'angular2/core'
-@Directive({
-	//note that the square brackets make selector into an attribute selector, not an element selector
-	selector:'[autoGrow]',
-	host:{'(focus)':'onFocus()'}
-})
-export class AutoGrowDirective{
-	constructor(private _el:ElementRef, private _renderer:Renderer){}
-	onFocus(){
-		this._renderer.setElementStyle(this._el.nativeElement, 'width', '200');
-	}
-}
-    </code>
-</pre>
-<p>app.component.ts</p>
-<pre>
-    <code>	
-import {AutoGrowDirective} from './autogrow.directive'
-@Component({
-	template:'&lt;input type="text" autoGrow/>',
-	directives:[AutoGrowDirective]
-})
-    </code>
-</pre>
 <div class="jumbotron">
 	<p>click to activate</p>
 	<directives></directives>
 </div>
-<h3>Services</h3>
-<p>app.service.ts</p>
-<pre>
-    <code>	
-export class AppService{
-	getItems(){
-		return ["a","b","c"];}
-}
-    </code>
-</pre>
-<p>app.component.ts</p>
-<pre>
-    <code	>
-import {ItemsService} from './app.service'
-@Component({
-    template:'&lt;li *ngFor="let item of items">&lt;/li>',
-	providers:[AppService]
-})
-export class AppComponent{
-	items;
-	constructor(itemsService: AppService){
-		this.items = itemsService.getItems();
-	}
-}
-    </code>
-</pre>
-
 <div class="jumbotron">
 	<app-component></app-component>
 </div>

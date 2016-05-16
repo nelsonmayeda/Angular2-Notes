@@ -1,4 +1,4 @@
-System.register(['angular2/core', './026FavoriteComponent/favorite.component'], function(exports_1, context_1) {
+System.register(['@angular/core', './app.service', './026FavoriteComponent/favorite.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,28 +10,34 @@ System.register(['angular2/core', './026FavoriteComponent/favorite.component'], 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, favorite_component_1;
+    var core_1, app_service_1, favorite_component_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
+            function (app_service_1_1) {
+                app_service_1 = app_service_1_1;
+            },
             function (favorite_component_1_1) {
                 favorite_component_1 = favorite_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(noteService) {
+                    this.items = [];
+                    this.items = noteService.getNotes();
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
                         templateUrl: './app.html',
-                        directives: [favorite_component_1.FavoriteComponent]
+                        directives: [favorite_component_1.FavoriteComponent],
+                        providers: [app_service_1.AppService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [app_service_1.AppService])
                 ], AppComponent);
                 return AppComponent;
             }());

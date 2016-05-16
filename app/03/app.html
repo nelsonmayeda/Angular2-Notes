@@ -5,45 +5,9 @@
     </div>
 </div>
 <hr/>
-<h3>Property Binding</h3>
-<pre>
-    <code>	
-@Component({<img [src]="someVar"/>})
-<img bind-src="someVar"
-    </code>
-</pre>
-Expression Binding
-(slower, possibly leaves binding expression on screen)
-<pre>
-    <code>	
-	<img src="{{someExpression involving someVar}}"
-	export class AppComponent{someVar = "www.image.com";}
-    </code>
-</pre>
-Class Binding
-<pre>
-    <code>	
-	<li [class.someClass]="someVar"/>
-    </code>
-</pre>
-Style Binding
-<pre>
-    <code>	
-	<button [style.background]="someVar"/>
-    </code>
-</pre>
-Event Binding
-<pre>
-    <code>	
-	<button (click)="someFunc($event)"/>
-	export class AppComponent{someFunc(e){}}
-    </code>
-</pre>
-Two-way Binding
-	//note that ngModel has hardcoded directives for [value] and (input)
-	//essentially being <input type="text" [value]="someVar" (input)="someVar = $event.target.value"
-	<input type="text" [(ngModel)]="someVar"/>
-	<input type="text" bindon-ngModel="someVar"/>
-    </code>
-</pre>
+<div *ngFor="let item of items">
+    <h3>{{item.title}}</h3>
+    <p>{{item.descriptiontitle}}</p>
+    <pre><code>{{item.note}}</code></pre>
+</div>
 <favorite></favorite>

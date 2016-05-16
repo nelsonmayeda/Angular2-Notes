@@ -1,4 +1,4 @@
-System.register(['angular2/core', './036LikeComponent/like.component', './038VoterComponent/voter.component', './040Twitter/app.component'], function(exports_1, context_1) {
+System.register(['@angular/core', './036LikeComponent/like.component', './038VoterComponent/voter.component', './040Twitter/app.component', './app.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './036LikeComponent/like.component', './038Vot
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, like_component_1, voter_component_1, app_component_1;
+    var core_1, like_component_1, voter_component_1, app_component_1, app_service_1;
     var AppComponent;
     return {
         setters:[
@@ -25,18 +25,25 @@ System.register(['angular2/core', './036LikeComponent/like.component', './038Vot
             },
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;
+            },
+            function (app_service_1_1) {
+                app_service_1 = app_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(noteService) {
+                    this.items = [];
+                    this.items = noteService.getNotes();
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'component',
-                        template: "\nSection 4\nBuilding Re-usable Components\n            <like></like>\n            <voter></voter>\n            <twitter></twitter>\n            ",
-                        directives: [like_component_1.LikeComponent, voter_component_1.VoterComponent, app_component_1.AppComponent]
+                        moduleId: __moduleName,
+                        templateUrl: "./app.html",
+                        directives: [like_component_1.LikeComponent, voter_component_1.VoterComponent, app_component_1.AppComponent],
+                        providers: [app_service_1.AppService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [app_service_1.AppService])
                 ], AppComponent);
                 return AppComponent;
             }());

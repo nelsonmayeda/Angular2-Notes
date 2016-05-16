@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Renderer} from 'angular2/core'
+import {Directive, ElementRef, Renderer} from '@angular/core'
 @Directive({
 	//note that the square brackets make selector into an attribute selector, not an element selector
 	selector:'[autoGrow]',

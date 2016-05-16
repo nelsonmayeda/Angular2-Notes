@@ -1,5 +1,5 @@
-import {Component, OnInit} from 'angular2/core';
-import {HTTP_PROVIDERS} from 'angular2/http';
+import {Component, OnInit} from '@angular/core';
+import {HTTP_PROVIDERS} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
 
