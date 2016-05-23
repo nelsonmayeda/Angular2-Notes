@@ -6,7 +6,19 @@ import {GitHubProfileComponent} from './101Connecting to the Server/github-profi
 @Component({
     selector: 'component',
     moduleId: __moduleName,
-    templateUrl: './app.html',
+    template: `<div class="media">
+    <div class="media-body">    
+        <h1 class="media-heading">Section 9</h1>
+        <p class="lead">Connecting to the Server</p>
+    </div>
+</div>
+<hr/>
+<div *ngFor="let item of items">
+    <h3>{{item.title}}</h3>
+    <p>{{item.description}}</p>
+    <pre><code>{{item.note}}</code></pre>
+</div>
+<github-profile></github-profile>`,
     directives:[GitHubProfileComponent],
     providers:[AppService]
 })

@@ -30,7 +30,7 @@ System.register(['@angular/core', './app.service'], function(exports_1, context_
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
-                        templateUrl: './app.html',
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 8</h1>\n        <p class=\"lead\">Introduction to Reactive Extensions</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.description}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>",
                         directives: [],
                         providers: [app_service_1.AppService]
                     }), 

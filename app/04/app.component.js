@@ -39,7 +39,7 @@ System.register(['@angular/core', './036LikeComponent/like.component', './038Vot
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
-                        templateUrl: "./app.html",
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 4</h1>\n        <p class=\"lead\">Building Re-usable Components</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.description}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>\n<like></like>\n<voter></voter>\n<twitter></twitter>",
                         directives: [like_component_1.LikeComponent, voter_component_1.VoterComponent, app_component_1.AppComponent],
                         providers: [app_service_1.AppService]
                     }), 

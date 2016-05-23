@@ -11,3 +11,9 @@ declare var module: {id: string};
  * when the generated module format is 'system'.
  */
 declare var __moduleName: string;
+
+/**
+ * http://stackoverflow.com/questions/31173738/typescript-getting-error-ts2304-cannot-find-name-require
+ */
+
+declare var require: any

@@ -33,7 +33,7 @@ System.register(['@angular/core', './app.service', './026FavoriteComponent/favor
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
-                        templateUrl: './app.html',
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 3</h1>\n        <p class=\"lead\">Displaying Data and Handling Events</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.descriptiontitle}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>\n<favorite></favorite>",
                         directives: [favorite_component_1.FavoriteComponent],
                         providers: [app_service_1.AppService]
                     }), 

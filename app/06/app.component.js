@@ -33,7 +33,7 @@ System.register(['@angular/core', './app.service', './066Template-driven Forms/s
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
-                        templateUrl: './app.html',
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 6</h1>\n        <p class=\"lead\">Building Forms with Basic Validation</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.description}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>\n<subscription-form></subscription-form>",
                         directives: [subscription_form_component_1.SubscriptionFormComponent],
                         providers: [app_service_1.AppService]
                     }), 

@@ -36,7 +36,7 @@ System.register(['@angular/core', './app.service', './069SignUpForm/signup-form.
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
-                        templateUrl: './app.html',
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 7</h1>\n        <p class=\"lead\">Building Forms with Complex Validation</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.description}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>\n<signup-form></signup-form>\n<change-password-form></change-password-form>",
                         directives: [signup_form_component_1.SignUpFormComponent, change_password_form_component_1.ChangePasswordFormComponent],
                         providers: [app_service_1.AppService]
                     }), 

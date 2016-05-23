@@ -39,7 +39,7 @@ System.register(['@angular/core', './app.service', './004Seed/app.component', '.
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
-                        templateUrl: './app.html',
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 2</h1>\n        <p class=\"lead\">Angular 2 Jumpstart</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n\t<h3>{{item.title}}</h3>\n\t<p>{{item.description}}</p>\n\t<pre><code>{{item.note}}</code></pre>\n</div>\n<div class=\"jumbotron\">\n\t<appcomponent></appcomponent>\n</div>\n<div class=\"jumbotron\">\n\t<p>click to activate</p>\n\t<directives></directives>\n</div>\n<div class=\"jumbotron\">\n\t<app-component></app-component>\n</div>",
                         directives: [app_component_3.AppComponent, app_component_1.AppComponent, app_component_2.AppComponent],
                         providers: [app_service_1.AppService]
                     }), 

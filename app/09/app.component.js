@@ -33,7 +33,7 @@ System.register(['@angular/core', './app.service', './101Connecting to the Serve
                     core_1.Component({
                         selector: 'component',
                         moduleId: __moduleName,
-                        templateUrl: './app.html',
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 9</h1>\n        <p class=\"lead\">Connecting to the Server</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.description}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>\n<github-profile></github-profile>",
                         directives: [github_profile_component_1.GitHubProfileComponent],
                         providers: [app_service_1.AppService]
                     }), 

@@ -8,7 +8,20 @@ import {ChangePasswordFormComponent} from './077Model-driven Forms/change-passwo
 @Component({
     selector: 'component',
     moduleId: __moduleName,
-    templateUrl: './app.html',
+    template: `<div class="media">
+    <div class="media-body">    
+        <h1 class="media-heading">Section 7</h1>
+        <p class="lead">Building Forms with Complex Validation</p>
+    </div>
+</div>
+<hr/>
+<div *ngFor="let item of items">
+    <h3>{{item.title}}</h3>
+    <p>{{item.description}}</p>
+    <pre><code>{{item.note}}</code></pre>
+</div>
+<signup-form></signup-form>
+<change-password-form></change-password-form>`,
     directives:[SignUpFormComponent,ChangePasswordFormComponent],
     providers:[AppService]
 })

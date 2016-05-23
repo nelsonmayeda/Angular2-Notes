@@ -1,4 +1,4 @@
-System.register(['@angular/core', './app.service'], function(exports_1, context_1) {
+System.register(['@angular/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,23 @@ System.register(['@angular/core', './app.service'], function(exports_1, context_
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, app_service_1;
+    var core_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (app_service_1_1) {
-                app_service_1 = app_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(noteService) {
-                    this.items = [];
-                    this.items = noteService.getNotes();
+                function AppComponent() {
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'component',
-                        moduleId: __moduleName,
-                        templateUrl: './app.html',
-                        directives: [],
-                        providers: [app_service_1.AppService]
+                        template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 10</h1>\n        <p class=\"lead\">Building Single Page Apps</p>\n    </div>\n</div>"
                     }), 
-                    __metadata('design:paramtypes', [app_service_1.AppService])
+                    __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             }());
