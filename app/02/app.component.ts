@@ -8,7 +8,6 @@ import {AppComponent as Components} from './015Components/app.component';
 
 @Component({
     selector: 'component',
-    moduleId: __moduleName,
     template:`<div class="media">
     <div class="media-body">    
         <h1 class="media-heading">Section 2</h1>

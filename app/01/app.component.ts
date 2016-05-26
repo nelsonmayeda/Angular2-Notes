@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'component',
-    moduleId: __moduleName,
     template: `<div class="media">
     <div class="media-left">
         <img class="media-object" src="app/assets/angular.svg"/>

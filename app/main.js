@@ -1,24 +1,22 @@
-System.register(['@angular/platform-browser-dynamic', './app.component', '@ngrx/router', './routes'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    var platform_browser_dynamic_1, app_component_1, router_1, routes_1;
-    return {
-        setters:[
-            function (platform_browser_dynamic_1_1) {
-                platform_browser_dynamic_1 = platform_browser_dynamic_1_1;
-            },
-            function (app_component_1_1) {
-                app_component_1 = app_component_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
-            },
-            function (routes_1_1) {
-                routes_1 = routes_1_1;
-            }],
-        execute: function() {
-            platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [router_1.provideRouter(routes_1._routes)]);
-        }
-    }
-});
+"use strict";
+var ui_router_ng2_1 = require("ui-router-ng2");
+var router_config_1 = require("./router.config");
+var http_1 = require("@angular/http");
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
+var platform_browser_1 = require('@angular/platform-browser');
+require('rxjs/add/operator/toPromise');
+require('rxjs/add/operator/map');
+platform_browser_dynamic_1.bootstrap(ui_router_ng2_1.UiView, [
+    // provide(LocationStrategy, { useClass: HashLocationStrategy }),
+    core_1.provide(common_1.LocationStrategy, { useClass: common_1.PathLocationStrategy }),
+    core_1.provide(common_1.PlatformLocation, { useClass: platform_browser_1.BrowserPlatformLocation })
+].concat(ui_router_ng2_1.UIROUTER_PROVIDERS, http_1.HTTP_PROVIDERS, [
+    // Provide a custom UIRouterConfig to configure UI-Router
+    core_1.provide(ui_router_ng2_1.UIRouterConfig, { useClass: router_config_1.MyUIRouterConfig }),
+    // Make `directives: [UIROUTER_DIRECTIVES]` optional in a @Component
+    // by always including them in the PLATFORM_DIRECTIVCES
+    core_1.provide(core_1.PLATFORM_DIRECTIVES, { useValue: [ui_router_ng2_1.UIROUTER_DIRECTIVES], multi: true })
+]));
 //# sourceMappingURL=main.js.map

@@ -5,7 +5,6 @@ import {AppComponent as Zipper} from './054ZippyComponent/app.component'
 import {AppService} from './app.service'
 @Component({
     selector: 'component',
-    moduleId: __moduleName,
     template: `<div class="media">
     <div class="media-body">    
         <h1 class="media-heading">Section 5</h1>

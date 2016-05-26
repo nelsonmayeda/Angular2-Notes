@@ -5,7 +5,6 @@ import {FavoriteComponent} from './026FavoriteComponent/favorite.component';
 
 @Component({
     selector: 'component',
-    moduleId: __moduleName,
     template:`<div class="media">
     <div class="media-body">    
         <h1 class="media-heading">Section 3</h1>

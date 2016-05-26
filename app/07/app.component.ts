@@ -7,7 +7,6 @@ import {ChangePasswordFormComponent} from './077Model-driven Forms/change-passwo
 
 @Component({
     selector: 'component',
-    moduleId: __moduleName,
     template: `<div class="media">
     <div class="media-body">    
         <h1 class="media-heading">Section 7</h1>

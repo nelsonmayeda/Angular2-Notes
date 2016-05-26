@@ -5,7 +5,6 @@ import {AppService} from './app.service';
 import {SubscriptionFormComponent} from './066Template-driven Forms/subscription-form.component'
 @Component({
     selector: 'component',
-    moduleId: __moduleName,
     template: `<div class="media">
     <div class="media-body">    
         <h1 class="media-heading">Section 6</h1>
