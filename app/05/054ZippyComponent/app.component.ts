@@ -1,9 +1,7 @@
 import {Component} from '@angular/core';
-import {ZippyComponent} from './zippy.component';
 
 @Component({
     selector: 'my-app',
-    directives: [ZippyComponent],
     template: `
         <zippy title="Who can see my stuff?">
             Content of who can see my stuff

@@ -3,7 +3,7 @@ var PasswordValidators = (function () {
     function PasswordValidators() {
     }
     PasswordValidators.complexPassword = function (control) {
-        var minLength = 5;
+        var minLength = 3;
         // We bypass this validation rule if the field is empty, assuming
         // it is valid. At this point, the required validator will kick in
         // and asks the user to type a value. With this technique, we'll 

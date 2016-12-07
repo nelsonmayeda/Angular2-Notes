@@ -4,16 +4,7 @@
     'ui-router-ng2':              'node_modules/ui-router-ng2/_bundles/ui-router-ng2.js',
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-    '@angular':                   'node_modules/@angular',
-    //rxjs dependencies
-    //'symbol-observable':'node_modules/rxjs/node_modules/symbol-observable',
-    // @ngrx/router package
-    //'@ngrx/router':                   'node_modules/@ngrx/router',
-    // @ngrx/router dependencies
-    //'path-to-regexp':                   'node_modules/@ngrx/router/node_modules/path-to-regexp',
-    //'isarray':                   'node_modules/@ngrx/router/node_modules/path-to-regexp/node_modules/isarray',
-    //'query-string':                   'node_modules/@ngrx/router/node_modules/query-string',
-    //'strict-uri-encode':                   'node_modules/@ngrx/router/node_modules/query-string/node_modules/strict-uri-encode',
+    '@angular':                   'node_modules/@angular'
   };
   var packages = {
     'app':                        {  main: 'main.js',  defaultExtension: 'js' },
@@ -21,36 +12,41 @@
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
   };
 
-  var packageNames = [
-    '@angular/common',
-    '@angular/compiler',
-    '@angular/core',
-    '@angular/http',
-    '@angular/platform-browser',
-    '@angular/platform-browser-dynamic',
-    '@angular/router',
-    '@angular/router-deprecated',
-    '@angular/testing',
-    '@angular/upgrade',
-    
-    //rxjs dependencies
-    //'symbol-observable',
-    // @ngrx/router package
-    //'@ngrx/router',
-    // @ngrx/router dependencies
-    //'path-to-regexp',
-    //'isarray',
-    //'query-string',
-    //'strict-uri-encode'
+
+  var ngPackageNames = [
+    'common',
+    'compiler',
+    'core',
+    'forms',
+    'http',
+    'platform-browser',
+    'platform-browser-dynamic',
+    'router',
+    'router-deprecated',
+    'testing',
+    'upgrade'
   ];
-  packageNames.forEach(function(pkgName) {
-    packages[pkgName] = { main: 'index.js', defaultExtension: 'js' };
-  });
+  
+// Individual files (~300 requests):
+  function packIndex(pkgName) {
+    packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
+  }
+  // Bundled (~40 requests):
+  function packUmd(pkgName) {
+    packages['@angular/'+pkgName] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
+  }
+  // Most environments should use UMD; some (Karma) need the individual index files
+  var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
+  // Add package entries for angular packages
+  ngPackageNames.forEach(setPackageConfig);
+
 
   var config = {
+    transpiler: false,
+    meta: { "ui-router-ng2": { format: "cjs" } },
     map: map,
     packages: packages
-  }
+  };
 
   System.config(config);
 

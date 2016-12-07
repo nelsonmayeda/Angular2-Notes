@@ -1,30 +1,26 @@
 import {AppComponent} from "./app.component";
-import {Ng2StateDeclaration} from "ui-router-ng2/ng2/interface";
+import {Ng2StateDeclaration} from "ui-router-ng2";
 
-import {AppComponent as Sidebar} from './shared/app.component';
+import {Sidebar} from './shared/app.component';
 
-import {AppComponent as GettingStartedwithAngular2} from './01/app.component';
-import {AppComponent as Angular2Jumpstart} from './02/app.component';
-import {AppComponent as DisplayingDataandHandlingFunctions} from './03/app.component';
-import {AppComponent as BuildingReusableComponents} from './04/app.component';
-import {AppComponent as ControllingRenderingofHTML} from './05/app.component';
-import {AppComponent as BuildingFormswithBasicValidation} from './06/app.component';
-import {AppComponent as BuildingFormswithComplexValidation} from './07/app.component';
-import {AppComponent as IntroductiontoReactiveExtensions} from './08/app.component';
-import {AppComponent as ConnectingtotheServer} from './09/app.component';
-import {AppComponent as BuildingSinglePageApps} from './10/app.component';
-// The top level states
+import {GettingStartedwithAngular2} from './01/app.component';
+import {Angular2Jumpstart} from './02/app.component';
+import {DisplayingDataandHandlingFunctions} from './03/app.component';
+import {BuildingReusableComponents} from './04/app.component';
+import {ControllingRenderingofHTML} from './05/app.component';
+import {BuildingFormswithBasicValidation} from './06/app.component';
+import {BuildingFormswithComplexValidation} from './07/app.component';
+import {IntroductiontoReactiveExtensions} from './08/app.component';
+import {ConnectingtotheServer} from './09/app.component';
+import {BuildingSinglePageApps} from './10/app.component';
 let MAIN_STATES: Ng2StateDeclaration[] = [
-    // <ui-view></ui-view> (defined in index.html)
     { 
         name: 'app',
         component: AppComponent,
         abstract:true
     }
 ];
-// App.Second level states
 let APP_STATES: Ng2StateDeclaration[] = [
-    // <ui-view></ui-view> (defined in AppComponent)
     { 
         name:'app.Default',
         url:'',

@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var LikeComponent = (function () {
     function LikeComponent() {
         this.totalLikes = 0;
@@ -18,23 +18,23 @@ var LikeComponent = (function () {
         this.iLike = !this.iLike;
         this.totalLikes += this.iLike ? 1 : -1;
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], LikeComponent.prototype, "totalLikes", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], LikeComponent.prototype, "iLike", void 0);
-    LikeComponent = __decorate([
-        core_1.Component({
-            selector: 'like',
-            template: "\n    <i\n       class=\"glyphicon glyphicon-heart\" \n       [class.highlighted]=\"iLike\"\n       (click)=\"onClick()\">\n    </i>\n    <span>{{ totalLikes }}</span>\n    ",
-            styles: ["\n        .glyphicon-heart {\n            color: #ccc;\n            cursor: pointer;\n        }\n        \n        .highlighted {\n            color: deeppink;\n        }   \n    "]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], LikeComponent);
     return LikeComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], LikeComponent.prototype, "totalLikes", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], LikeComponent.prototype, "iLike", void 0);
+LikeComponent = __decorate([
+    core_1.Component({
+        selector: 'like',
+        template: "\n    <i\n       class=\"glyphicon glyphicon-heart\" \n       [class.highlighted]=\"iLike\"\n       (click)=\"onClick()\">\n    </i>\n    <span>{{ totalLikes }}</span>\n    ",
+        styles: ["\n        .glyphicon-heart {\n            color: #ccc;\n            cursor: pointer;\n        }\n        \n        .highlighted {\n            color: deeppink;\n        }   \n    "]
+    }),
+    __metadata("design:paramtypes", [])
+], LikeComponent);
 exports.LikeComponent = LikeComponent;
 //# sourceMappingURL=like.component.js.map

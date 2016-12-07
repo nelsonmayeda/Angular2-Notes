@@ -17,7 +17,7 @@ export class AppService{
                 note: ``
             }  ,
           {
-                title:"ngControl",
+                title:"ngModel",
                 description:"",
                 note: ``
             }  ,
@@ -27,7 +27,7 @@ export class AppService{
                 note: ``
             }  ,
           {
-                title:"ngForm",
+                title:"ngModel",
                 description:"",
                 note: ``
             }  ,

@@ -1,7 +1,7 @@
 
-import {Component} from '@angular/core'
-import {TweetService} from './tweet.service'
-import {TweetComponent} from './tweet.component'
+import {Component} from '@angular/core';
+import {TweetService} from './tweet.service';
+import {TweetComponent} from './tweet.component';
 
 @Component({
     selector: 'tweets',
@@ -10,8 +10,7 @@ import {TweetComponent} from './tweet.component'
             <tweet [data]="tweet"></tweet>
         </div>
     `,
-    providers: [TweetService],
-    directives: [TweetComponent]
+    providers: [TweetService]
 })
 export class TweetsComponent {
     tweets: any[];

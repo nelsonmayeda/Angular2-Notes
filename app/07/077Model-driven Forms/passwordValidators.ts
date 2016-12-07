@@ -1,9 +1,9 @@
-import {Control, ControlGroup} from '@angular/common';
+import {FormControl, FormGroup} from '@angular/forms';
 
 export class PasswordValidators {
 
-    static complexPassword(control: Control){
-        const minLength = 5;
+    static complexPassword(control: FormControl){
+        const minLength = 3;
         
         // We bypass this validation rule if the field is empty, assuming
         // it is valid. At this point, the required validator will kick in
@@ -32,7 +32,7 @@ export class PasswordValidators {
         return null;
     }
     
-    static passwordsShouldMatch(group: ControlGroup){
+    static passwordsShouldMatch(group: FormGroup){
         var newPassword = group.find('newPassword').value;
         var confirmPassword = group.find('confirmPassword').value;
         

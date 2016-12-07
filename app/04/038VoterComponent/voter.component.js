@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var VoterComponent = (function () {
     function VoterComponent() {
         this.voteCount = 0;
@@ -27,27 +27,27 @@ var VoterComponent = (function () {
         this.myVote--;
         this.vote.emit({ myVote: this.myVote });
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], VoterComponent.prototype, "voteCount", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], VoterComponent.prototype, "myVote", void 0);
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], VoterComponent.prototype, "vote", void 0);
-    VoterComponent = __decorate([
-        core_1.Component({
-            selector: 'voter',
-            template: "\n    <div class=\"voter\">\n        <i \n            class=\"glyphicon glyphicon-menu-up vote-button\"\n            [class.highlighted]=\"myVote == 1\" \n            (click)=\"upVote()\"></i>\n            \n        <span class=\"vote-count\">{{ voteCount + myVote }}</span>\n        \n        <i \n            class=\"glyphicon glyphicon-menu-down vote-button\"\n            [class.highlighted]=\"myVote == -1\" \n            (click)=\"downVote()\"></i>\n    </div>\n    ",
-            styles: ["\n        .voter {\n            width: 20px;\n            text-align: center;\n            color: #999;\n        }\n        \n        .vote-count {\n            font-size: 1.2em;\n        }\n        \n        .vote-button {\n            cursor: pointer;\n        }\n        \n        .highlighted {\n            font-weight: bold;\n            color: orange;\n        }\n    "]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], VoterComponent);
     return VoterComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], VoterComponent.prototype, "voteCount", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], VoterComponent.prototype, "myVote", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], VoterComponent.prototype, "vote", void 0);
+VoterComponent = __decorate([
+    core_1.Component({
+        selector: 'voter',
+        template: "\n    <div class=\"voter\">\n        <i \n            class=\"glyphicon glyphicon-menu-up vote-button\"\n            [class.highlighted]=\"myVote == 1\" \n            (click)=\"upVote()\"></i>\n            \n        <span class=\"vote-count\">{{ voteCount + myVote }}</span>\n        \n        <i \n            class=\"glyphicon glyphicon-menu-down vote-button\"\n            [class.highlighted]=\"myVote == -1\" \n            (click)=\"downVote()\"></i>\n    </div>\n    ",
+        styles: ["\n        .voter {\n            width: 20px;\n            text-align: center;\n            color: #999;\n        }\n        \n        .vote-count {\n            font-size: 1.2em;\n        }\n        \n        .vote-button {\n            cursor: pointer;\n        }\n        \n        .highlighted {\n            font-weight: bold;\n            color: orange;\n        }\n    "]
+    }),
+    __metadata("design:paramtypes", [])
+], VoterComponent);
 exports.VoterComponent = VoterComponent;
 //# sourceMappingURL=voter.component.js.map

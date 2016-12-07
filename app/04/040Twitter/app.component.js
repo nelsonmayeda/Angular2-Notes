@@ -8,23 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var tweet_component_1 = require('./tweet.component');
-var tweet_service_1 = require('./tweet.service');
+var core_1 = require("@angular/core");
+var tweet_service_1 = require("./tweet.service");
 var AppComponent = (function () {
     function AppComponent(tweetService) {
         this.tweets = tweetService.getTweets();
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'twitter',
-            template: "\n        <div *ngFor=\"let tweet of tweets\">\n            <tweet [data]=\"tweet\"></tweet>\n        </div>\n    ",
-            directives: [tweet_component_1.TweetComponent],
-            providers: [tweet_service_1.TweetService]
-        }), 
-        __metadata('design:paramtypes', [tweet_service_1.TweetService])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'twitter',
+        template: "\n        <div *ngFor=\"let tweet of tweets\">\n            <tweet [data]=\"tweet\"></tweet>\n        </div>\n    ",
+        providers: [tweet_service_1.TweetService]
+    }),
+    __metadata("design:paramtypes", [tweet_service_1.TweetService])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

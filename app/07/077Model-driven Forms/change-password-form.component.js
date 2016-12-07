@@ -8,15 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var passwordValidators_1 = require('./passwordValidators');
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var passwordValidators_1 = require("./passwordValidators");
 var ChangePasswordFormComponent = (function () {
     function ChangePasswordFormComponent(fb) {
-        this.form = fb.group({
-            oldPassword: ['', common_1.Validators.required],
-            newPassword: ['', common_1.Validators.compose([
-                    common_1.Validators.required,
+        this.ng2Form = fb.group({
+            oldPassword: ['', forms_1.Validators.required],
+            newPassword: ['', forms_1.Validators.compose([
+                    forms_1.Validators.required,
                     passwordValidators_1.PasswordValidators.complexPassword
                 ])],
             // Note that here is no need to apply complexPassword validator
@@ -25,27 +25,30 @@ var ChangePasswordFormComponent = (function () {
             // will compare confirm password with new password and this will
             // implicitly enforce that confirm password should match complexity
             // rules. 
-            confirmPassword: ['', common_1.Validators.required]
+            confirmPassword: ['', forms_1.Validators.required]
         }, { validator: passwordValidators_1.PasswordValidators.passwordsShouldMatch });
     }
-    ChangePasswordFormComponent.prototype.changePassword = function () {
+    ChangePasswordFormComponent.prototype.changePassword = function (arg) {
         // Validating the oldPassword on submit. In a real-world application
         // here, we'll use a service to call the server. The server would
         // tell us that the old password does not match. 
-        var oldPassword = this.form.find('oldPassword');
+        var oldPassword = this.ng2Form.find('oldPassword');
         if (oldPassword.value != '1234')
             oldPassword.setErrors({ validOldPassword: true });
-        if (this.form.valid)
+        if (this.ng2Form.valid)
             alert("Password successfully changed.");
     };
-    ChangePasswordFormComponent = __decorate([
-        core_1.Component({
-            selector: 'change-password-form',
-            templateUrl: "<form [ngFormModel]=\"form\" (ngSubmit)=\"changePassword()\">\n    <div class=\"form-group\">\n        <label for=\"oldPassword\">Current Password</label>\n        <input \n            id=\"oldPassword\" \n            type=\"password\" \n            class=\"form-control\"\n            ngControl=\"oldPassword\"\n            #oldPassword=\"ngForm\">\n        <div *ngIf=\"oldPassword.touched && oldPassword.errors\">\n            <div\n                *ngIf=\"oldPassword.errors.required\" \n                class=\"alert alert-danger\">Old password is required.</div>\n            <div\n                *ngIf=\"oldPassword.errors.validOldPassword\"\n                class=\"alert alert-danger\">Old password is incorrect.</div>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <label for=\"newPassword\">New Password</label>\n        <input \n            id=\"newPassword\" \n            type=\"password\" \n            class=\"form-control\"\n            ngControl=\"newPassword\"\n            #newPassword=\"ngForm\">\n        <div *ngIf=\"newPassword.touched && newPassword.errors\">\n            <div \n                *ngIf=\"newPassword.errors.required\"\n                class=\"alert alert-danger\">\n                New password is required.</div>\n            <div \n                *ngIf=\"newPassword.errors.complexPassword\"\n                class=\"alert alert-danger\">\n                New password should be minimum {{ newPassword.errors.complexPassword.minLength }} characters.</div>\n        </div>\n    </div>\n    <div class=\"form-group\">\n        <label for=\"confirmPassword\">Confirm Password</label>\n        <input \n            id=\"confirmPassword\" \n            type=\"password\" \n            class=\"form-control\"\n            ngControl=\"confirmPassword\"\n            #confirmPassword=\"ngForm\">\n        <div \n            *ngIf=\"confirmPassword.touched && !confirmPassword.valid\"\n            class=\"alert alert-danger\">\n            Confirm the password.</div>\n        <!-- \n            Note that here I'm checking for form.errors.passwordShouldMatch\n            because this validation is applied at the form itself. \n         -->\n        <div \n            *ngIf=\"confirmPassword.touched && form.errors && form.errors.passwordsShouldMatch\"\n            class=\"alert alert-danger\">\n            Passwords don't match.</div>\n    </div>\n    <button class=\"btn btn-primary\" type=\"submit\" [disabled]=\"!form.valid\">Change Password</button>\n</form>"
-        }), 
-        __metadata('design:paramtypes', [common_1.FormBuilder])
-    ], ChangePasswordFormComponent);
     return ChangePasswordFormComponent;
 }());
+ChangePasswordFormComponent = __decorate([
+    core_1.Component({
+        selector: 'change-password-form',
+        //moduleId: module.id,
+        //templateUrl:'change-password-form.html',
+        template: "",
+        styles: [""]
+    }),
+    __metadata("design:paramtypes", [forms_1.FormBuilder])
+], ChangePasswordFormComponent);
 exports.ChangePasswordFormComponent = ChangePasswordFormComponent;
 //# sourceMappingURL=change-password-form.component.js.map

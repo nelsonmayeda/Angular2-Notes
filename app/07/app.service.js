@@ -37,7 +37,7 @@ var AppService = (function () {
             {
                 title: "Loader Image",
                 description: "",
-                note: "\t<input #somevar=\"ngForm\"/>\n\t<div *ngIf=\"somevar.control.pending\">Checking...</div>"
+                note: "\t<input #somevar=\"ngModel\"/>\n\t<div *ngIf=\"somevar.control.pending\">Checking...</div>"
             },
             {
                 title: "Validating Upon Form Submit",

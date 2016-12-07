@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HTTP_PROVIDERS} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
-
 import {GitHubService} from './github.service';
 
 @Component({
@@ -32,12 +30,11 @@ import {GitHubService} from './github.service';
                 <h4 class="media-heading">{{ follower.login }}</h4>
             </div>
         </div>        
-    `,
-    providers: [HTTP_PROVIDERS, GitHubService]
+    `
 })
 export class GitHubProfileComponent implements OnInit {
     isLoading = true;
-    username = "octocat";
+    username = "nelsonmayeda";
     user = {}; 
     followers = [];
     

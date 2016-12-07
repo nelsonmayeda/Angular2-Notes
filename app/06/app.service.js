@@ -20,7 +20,7 @@ var AppService = (function () {
                 note: ""
             },
             {
-                title: "ngControl",
+                title: "ngModel",
                 description: "",
                 note: ""
             },
@@ -30,7 +30,7 @@ var AppService = (function () {
                 note: ""
             },
             {
-                title: "ngForm",
+                title: "ngModel",
                 description: "",
                 note: ""
             },

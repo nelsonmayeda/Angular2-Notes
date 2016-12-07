@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {TweetComponent} from './tweet.component'
-import {TweetService} from './tweet.service'
+import {TweetService} from './tweet.service';
 
 @Component({
     selector: 'twitter',
@@ -9,7 +8,6 @@ import {TweetService} from './tweet.service'
             <tweet [data]="tweet"></tweet>
         </div>
     `,
-    directives: [TweetComponent],
     providers: [TweetService]
 })
 export class AppComponent {

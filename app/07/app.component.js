@@ -8,25 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var app_service_1 = require('./app.service');
-var signup_form_component_1 = require('./069SignUpForm/signup-form.component');
-var change_password_form_component_1 = require('./077Model-driven Forms/change-password-form.component');
-var AppComponent = (function () {
-    function AppComponent(noteService) {
+var core_1 = require("@angular/core");
+var app_service_1 = require("./app.service");
+var BuildingFormswithComplexValidation = (function () {
+    function BuildingFormswithComplexValidation(noteService) {
         this.items = [];
         this.items = noteService.getNotes();
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'component',
-            template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 7</h1>\n        <p class=\"lead\">Building Forms with Complex Validation</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.description}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>\n<signup-form></signup-form>\n<change-password-form></change-password-form>",
-            directives: [signup_form_component_1.SignUpFormComponent, change_password_form_component_1.ChangePasswordFormComponent],
-            providers: [app_service_1.AppService]
-        }), 
-        __metadata('design:paramtypes', [app_service_1.AppService])
-    ], AppComponent);
-    return AppComponent;
+    return BuildingFormswithComplexValidation;
 }());
-exports.AppComponent = AppComponent;
+BuildingFormswithComplexValidation = __decorate([
+    core_1.Component({
+        selector: 'component',
+        moduleId: module.id,
+        templateUrl: 'app.html',
+        styleUrls: ['app.css'],
+        providers: [app_service_1.AppService]
+    }),
+    __metadata("design:paramtypes", [app_service_1.AppService])
+], BuildingFormswithComplexValidation);
+exports.BuildingFormswithComplexValidation = BuildingFormswithComplexValidation;
 //# sourceMappingURL=app.component.js.map

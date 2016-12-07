@@ -101,7 +101,7 @@ export class FormComponent{
           {
                 title:"Loader Image",
                 description:"",
-                note: `	<input #somevar="ngForm"/>
+                note: `	<input #somevar="ngModel"/>
 	<div *ngIf="somevar.control.pending">Checking...</div>`
             }   ,
           {

@@ -2,8 +2,31 @@ export class AppService{
     getNotes(){
         return [
           {
+                title:"Modules",
+                description:"Angular Modules help organize an application into cohesive blocks of functionality.",
+                note: 
+`app.module.ts
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  imports:      [ BrowserModule ],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+
+main.ts
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
+platformBrowserDynamic().bootstrapModule(AppModule);`
+            } ,
+          {
                 title:"Components",
-                description:"",
+                description:"A component is the combination of an HTML template and a component class that controls a portion of the screen.",
                 note: 
 `app.component.ts
 
@@ -22,19 +45,6 @@ import {AppComponent} from './app.component'
 	directives:[AppComponent]
 })`
             } ,
-          {
-                title:"Template Options",
-                description:"Using an external html template",
-                note: 
-`app.component.ts
-
-@Component({
-	selector:'appcomponent',
-	//note that this line allows relative paths for templateUrl
-	moduleId: __moduleName,
-	templateUrl:'./app.component.html'
-})`
-            }   ,
           {
                 title:"Directives",
                 description:"",

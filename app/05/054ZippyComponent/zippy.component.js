@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var ZippyComponent = (function () {
     function ZippyComponent() {
         this.isExpanded = false;
@@ -16,19 +16,19 @@ var ZippyComponent = (function () {
     ZippyComponent.prototype.toggle = function () {
         this.isExpanded = !this.isExpanded;
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ZippyComponent.prototype, "title", void 0);
-    ZippyComponent = __decorate([
-        core_1.Component({
-            selector: 'zippy',
-            styles: ["\n        .zippy {\n            border: 1px solid #ccc;\n            border-radius: 2px;\n        }\n        \n        .zippy .zippy-title {\n            padding: 20px;\n            font-weight: bold;\n        }\n        \n        .zippy .zippy-title:hover{\n            background: #f0f0f0;\n            cursor: pointer;\n        }\n        \n        .zippy .zippy-content {\n            padding: 20px;\n        }\n    "],
-            template: "\n    <div class=\"zippy\">\n        <div \n            class=\"zippy-title\"\n            (click)=\"toggle()\">\n            {{ title }} \n            <i \n                class=\"pull-right glyphicon\" \n                [ngClass]=\"\n                    { \n                        'glyphicon-chevron-down': !isExpanded, \n                        'glyphicon-chevron-up': isExpanded \n                    }\">\n            </i>\n        </div>\n        <div *ngIf=\"isExpanded\" class=\"zippy-content\">\n            <ng-content></ng-content> \n        </div>\n    </div>    \n    "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ZippyComponent);
     return ZippyComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], ZippyComponent.prototype, "title", void 0);
+ZippyComponent = __decorate([
+    core_1.Component({
+        selector: 'zippy',
+        styles: ["\n        .zippy {\n            border: 1px solid #ccc;\n            border-radius: 2px;\n        }\n        \n        .zippy .zippy-title {\n            padding: 20px;\n            font-weight: bold;\n        }\n        \n        .zippy .zippy-title:hover{\n            background: #f0f0f0;\n            cursor: pointer;\n        }\n        \n        .zippy .zippy-content {\n            padding: 20px;\n        }\n    "],
+        template: "\n    <div class=\"zippy\">\n        <div \n            class=\"zippy-title\"\n            (click)=\"toggle()\">\n            {{ title }} \n            <i \n                class=\"pull-right glyphicon\" \n                [ngClass]=\"\n                    { \n                        'glyphicon-chevron-down': !isExpanded, \n                        'glyphicon-chevron-up': isExpanded \n                    }\">\n            </i>\n        </div>\n        <div *ngIf=\"isExpanded\" class=\"zippy-content\">\n            <ng-content></ng-content> \n        </div>\n    </div>    \n    "
+    }),
+    __metadata("design:paramtypes", [])
+], ZippyComponent);
 exports.ZippyComponent = ZippyComponent;
 //# sourceMappingURL=zippy.component.js.map

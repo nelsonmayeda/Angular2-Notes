@@ -8,24 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var app_service_1 = require('./app.service');
-var favorite_component_1 = require('./026FavoriteComponent/favorite.component');
-var AppComponent = (function () {
-    function AppComponent(noteService) {
+var core_1 = require("@angular/core");
+var app_service_1 = require("./app.service");
+var DisplayingDataandHandlingFunctions = (function () {
+    function DisplayingDataandHandlingFunctions(noteService) {
         this.items = [];
         this.items = noteService.getNotes();
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'component',
-            template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 3</h1>\n        <p class=\"lead\">Displaying Data and Handling Events</p>\n    </div>\n</div>\n<hr/>\n<div *ngFor=\"let item of items\">\n    <h3>{{item.title}}</h3>\n    <p>{{item.descriptiontitle}}</p>\n    <pre><code>{{item.note}}</code></pre>\n</div>\n<favorite></favorite>",
-            directives: [favorite_component_1.FavoriteComponent],
-            providers: [app_service_1.AppService]
-        }), 
-        __metadata('design:paramtypes', [app_service_1.AppService])
-    ], AppComponent);
-    return AppComponent;
+    return DisplayingDataandHandlingFunctions;
 }());
-exports.AppComponent = AppComponent;
+DisplayingDataandHandlingFunctions = __decorate([
+    core_1.Component({
+        selector: 'component',
+        moduleId: module.id,
+        templateUrl: 'app.html',
+        styleUrls: ['app.css'],
+        providers: [app_service_1.AppService]
+    }),
+    __metadata("design:paramtypes", [app_service_1.AppService])
+], DisplayingDataandHandlingFunctions);
+exports.DisplayingDataandHandlingFunctions = DisplayingDataandHandlingFunctions;
 //# sourceMappingURL=app.component.js.map

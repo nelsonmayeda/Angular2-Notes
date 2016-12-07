@@ -5,14 +5,14 @@ var AppService = (function () {
     AppService.prototype.getNotes = function () {
         return [
             {
-                title: "Components",
-                description: "",
-                note: "app.component.ts\n\nimport {Component} from 'angular2/core'\n@Component({\n\tselector:'appcomponent',\n\ttemplate:'<div></div>'\n})\nexport class AppComponent{}\n\npage.component.ts\n\nimport {AppComponent} from './app.component'\n@Component({\n\ttemplate:'<appcomponent></appcomponent>',\n\tdirectives:[AppComponent]\n})"
+                title: "Modules",
+                description: "Angular Modules help organize an application into cohesive blocks of functionality.",
+                note: "app.module.ts\n\nimport { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  imports:      [ BrowserModule ],\n  declarations: [ AppComponent ],\n  bootstrap:    [ AppComponent ]\n})\nexport class AppModule { }\n\nmain.ts\n\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\nimport { AppModule } from './app.module';\nplatformBrowserDynamic().bootstrapModule(AppModule);"
             },
             {
-                title: "Template Options",
-                description: "Using an external html template",
-                note: "app.component.ts\n\n@Component({\n\tselector:'appcomponent',\n\t//note that this line allows relative paths for templateUrl\n\tmoduleId: __moduleName,\n\ttemplateUrl:'./app.component.html'\n})"
+                title: "Components",
+                description: "A component is the combination of an HTML template and a component class that controls a portion of the screen.",
+                note: "app.component.ts\n\nimport {Component} from 'angular2/core'\n@Component({\n\tselector:'appcomponent',\n\ttemplate:'<div></div>'\n})\nexport class AppComponent{}\n\npage.component.ts\n\nimport {AppComponent} from './app.component'\n@Component({\n\ttemplate:'<appcomponent></appcomponent>',\n\tdirectives:[AppComponent]\n})"
             },
             {
                 title: "Directives",

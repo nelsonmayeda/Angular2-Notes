@@ -8,18 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var BuildingSinglePageApps = (function () {
+    function BuildingSinglePageApps() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'component',
-            template: "<div class=\"media\">\n    <div class=\"media-body\">    \n        <h1 class=\"media-heading\">Section 10</h1>\n        <p class=\"lead\">Building Single Page Apps</p>\n    </div>\n</div>"
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    return BuildingSinglePageApps;
 }());
-exports.AppComponent = AppComponent;
+BuildingSinglePageApps = __decorate([
+    core_1.Component({
+        selector: 'component',
+        moduleId: module.id,
+        templateUrl: 'app.html',
+        styleUrls: ['app.css']
+    }),
+    __metadata("design:paramtypes", [])
+], BuildingSinglePageApps);
+exports.BuildingSinglePageApps = BuildingSinglePageApps;
 //# sourceMappingURL=app.component.js.map
