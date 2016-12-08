@@ -46,7 +46,7 @@
     meta: { "ui-router-ng2": { format: "cjs" } },
     map: map,
     packages: packages,
-    baseURL: './'
+    baseURL: '/Angular2-Notes/'
   };
 
   System.config(config);
