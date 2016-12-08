@@ -45,7 +45,8 @@
     transpiler: false,
     meta: { "ui-router-ng2": { format: "cjs" } },
     map: map,
-    packages: packages
+    packages: packages,
+    baseURL: './'
   };
 
   System.config(config);

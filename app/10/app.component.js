@@ -19,7 +19,7 @@ BuildingSinglePageApps = __decorate([
         selector: 'component',
         moduleId: module.id,
         templateUrl: 'app.html',
-        styleUrls: ['app.css']
+        styleUrls: ['app.css'],
     }),
     __metadata("design:paramtypes", [])
 ], BuildingSinglePageApps);
